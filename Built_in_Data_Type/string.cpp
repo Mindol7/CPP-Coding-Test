@@ -9,6 +9,5 @@ int main(){
     string str4(str2, 0, 5); // Hello까지만 복사
     string str5(10, '*'); // 반복된 문자로 초기화
 
-
     return 0;
 }

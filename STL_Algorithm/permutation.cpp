@@ -15,7 +15,6 @@ bool compare(const int &a, const int &b){
 
 int main(){
     vector<int> v = {3, 1, 2};
-
     // sort(v.begin(), v.end()); // 첫 번째 정렬 방법 (오름차순 정렬)
     // sort(v.rbegin(), v.rend()); // 두 번째 정렬 방법 (내림차순 정렬)
 
