@@ -1,20 +1,23 @@
 #include <stdio.h>
 
-void swap(int * p1, int * p2){
-    int temp;
-
-    temp = *p1;
-    *p2 = *p1;
-    *p1 = temp;
-}
-
 int main(){
-    int a = 10;
-    int b = 20;
-    
-    printf("Before: %d, %d\n", a, b);
-    swap(&a, &b);
-    printf("After : %d, %d\n", a, b);
+    int * arr[5];
+    int x = 1;
+    for(int i = 0; i<5; ++i){
+        for(int j = 0; j<5; ++j){
+            arr[i][j] = x;
+            x++;
+        }
+    }
+
+    int ** pptr = arr;
+
+    for(int i = 0; i<5; ++i){
+        for(int j = 0; j<5; ++j){
+            printf("VALUE : %d", pptr[i][j]);
+        }
+        printf("\n");
+    }
 
     return 0;
 }
