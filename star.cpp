@@ -1,20 +1,14 @@
 #include <stdio.h>
 
-void swap(int * p1, int * p2){
-    int temp;
-
-    temp = *p1;
-    *p2 = *p1;
-    *p1 = temp;
+void ComplexFunc(double num1, double num2){
+        printf("%f + %f = %f ", num1, num2, num1+num2);
 }
 
-int main(){
-    int a = 10;
-    int b = 20;
+int main(int argc, char * argv[]){
     
-    printf("Before: %d, %d\n", a, b);
-    swap(&a, &b);
-    printf("After : %d, %d\n", a, b);
+    printf("Argc : %d\n", argc);
+    printf("Argv[0] : %s\n", argv[0]);
+    printf("Argv[1] : %s\n", argv[1]);
 
     return 0;
 }
