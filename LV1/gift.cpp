@@ -1,8 +1,14 @@
 #include <bits/stdc++.h>
+<<<<<<< HEAD
+=======
+#define cin.tie(0)->sync_with_stdio(0)
+
+>>>>>>> ea59cc4 (CPP TEST)
 using namespace std;
 
 int solution(vector<string> friends, vector<string> gifts) {
     int answer = 0;
+<<<<<<< HEAD
     unordered_map<string, vector<string>> gift_table;
     string tx_gift, rx_gift; 
     unordered_map<string, int> friends_idx;
@@ -65,11 +71,17 @@ int solution(vector<string> friends, vector<string> gifts) {
         }
     }
     answer = *max_element(preview_gift.begin(), preview_gift.end());
+=======
+>>>>>>> ea59cc4 (CPP TEST)
     return answer;
 }
 
 int main(){
+<<<<<<< HEAD
     cout<<solution({"muzi", "ryan", "frodo", "neo"},{"muzi frodo", "muzi frodo", "ryan muzi", "ryan muzi", "ryan muzi", "frodo muzi", "frodo ryan", "neo muzi"})<<endl; // 2
+=======
+    cout<<solution({"muzi", "ryan", "frodo", "neo"}, {"muzi frodo", "muzi frodo", "ryan muzi", "ryan muzi", "ryan muzi", "frodo muzi", "frodo ryan", "neo muzi"})<<endl; // 2
+>>>>>>> ea59cc4 (CPP TEST)
     cout<<solution({"joy", "brad", "alessandro", "conan", "david"}, {"alessandro brad", "alessandro joy", "alessandro conan", "david alessandro", "alessandro david"})<<endl; // 4
     cout<<solution({"a", "b", "c"}, {"a b", "b a", "c a", "a c", "a c", "c a"})<<endl; // 0
 
