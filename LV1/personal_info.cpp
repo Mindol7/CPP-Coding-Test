@@ -8,6 +8,7 @@ using namespace std;
 vector<int> solution(string today, vector<string> terms, vector<string> privacies) {
     vector<int> answer;
 
+<<<<<<< HEAD
     istringstream today_stream(today);
     string temp;
     int today_year, today_month, today_day;
@@ -113,12 +114,28 @@ vector<int> solution(string today, vector<string> terms, vector<string> privacie
             answer.push_back(i+1);
         }
     }
+=======
+    pair<string, string> terms_tok[terms.size()];
+    string tok;
+
+    for(auto i : terms){
+        istringstream stream(i);
+        while(getline(stream, tok, ' ')){
+            if(isdigit(tok)){
+                terms_tok[0].second.push_back(tok);
+            }
+        }
+    }
+    
+    
+>>>>>>> 5e8193d (CPP_TEST)
     return answer;
 }
 
 int main(){
     vector<int> v1 = solution("2022.05.19", {"A 6", "B 12", "C 3"}, {"2021.05.02 A", "2021.07.01 B", "2022.02.19 C", "2022.02.20 C"});
 
+<<<<<<< HEAD
     for(auto i : v1){ // 1,3
         cout<<i<<" ";
     }cout<<endl;
@@ -130,6 +147,15 @@ int main(){
 
     vector<int> v3 = solution("2009.12.28", {"A 13"}, {"2008.11.03 A"});
     for(auto i : v3){
+=======
+    vector<int> v2 = solution("2020.01.01", {"Z 3", "D 5"}, {"2019.01.01 D", "2019.11.15 Z", "2019.08.02 D", "2019.07.01 D", "2018.12.28 Z"});
+
+    for(auto i : v1){ // 1, 3
+        cout<<i<<" ";
+    }cout<<endl;
+
+    for(auto i: v2){ // 1, 4, 5
+>>>>>>> 5e8193d (CPP_TEST)
         cout<<i<<" ";
     }cout<<endl;
 
